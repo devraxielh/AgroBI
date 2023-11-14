@@ -7,7 +7,7 @@ from sklearn import metrics
 from PIL import Image
 import warnings
 warnings.filterwarnings('ignore')
-
+st.set_page_config(layout="wide")
 df = pd.read_csv("Crop_recommendation.csv")
 with st.sidebar:
   col1, col2, col3 = st.columns(3)
@@ -44,7 +44,7 @@ with col2:
   st.write(texto)
   
 st.divider()
-st.subheader('Promedio de variables por cultivos')
-st.dataframe(pd.pivot_table(df,index=['label'],aggfunc='mean'))
-st.subheader('Correlaciones de variables por cultivos')
-st.dataframe(df.iloc[:,0:7].corr())
+#st.subheader('Promedio de variables por cultivos')
+#st.dataframe(pd.pivot_table(df,index=['label'],aggfunc='mean'))
+#st.subheader('Correlaciones de variables por cultivos')
+#st.dataframe(df.iloc[:,0:7].corr())
